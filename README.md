@@ -8,28 +8,28 @@ https://fmpokedex.netlify.app
 <p>-Users can search by name or index of Pokemon</p>
 <p>-Information provided of Pokemon includes: Name, Pokedex Number, Stats, Weight, Height, Sprite</p>
 
-<h3>Tech Stack</h3>
-	•	HTML
-	•	CSS3
-	•	JavaScript (ES6+)
-	•	Fetch API 
+<p><h3>Tech Stack</h3></p>
+<p>•	HTML</p>
+<p>•	CSS3</p>
+<p>•	JavaScript (ES6+)</p>
+<p>•	Fetch API </p>
 
-<h3 >Handles</h3>
-	•	Invalid responses (404)
-	•	Empty searches
-	•	Network errors
+<p><h3>Handles</h3></p>
+<p>•	Invalid responses (404)</p>
+<p>•	Empty searches</p>
+<p>•	Network errors</p>
 
-<h3>DOM Manipulation</h3>
-	•	Dynamically creates:
-	•	Type badges
-	•	Sprite image elements
-	•	Clears previous state before rendering new data
+<p><h3>DOM Manipulation</h3></p>
+<p>•	Dynamically creates:</p>
+<p>•	Type badges</p>
+<p>•	Sprite image elements</p>
+<p>•	Clears previous state before rendering new data</p>
 
-<h3>UI/UX Enhancements</h3>
-	•	Inline status messaging
-	•	Disabled button during loading
-	•	Scrollable internal content for fixed-height cards
-	•	Responsive CSS grid layout
+<p><h3>UI/UX Enhancements</h3></p>
+<p>•	Inline status messaging</p>
+<p>•	Disabled button during loading</p>
+<p>•	Scrollable internal content for fixed-height cards</p>
+<p>•	Responsive CSS grid layout</p>
 
 <img width="1014" height="682" alt="Screenshot 2026-02-17 at 7 38 00 PM" src="https://github.com/user-attachments/assets/2df894d8-bed1-4b7d-87b4-20d61935581e" />
 
