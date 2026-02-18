@@ -1,7 +1,7 @@
 <h2>Live Demo</h2></br>
 https://fmpokedex.netlify.app
 
-<h2>Screenshots</h2><br>
+<h2>Features/Screenshots</h2><br>
 
 -Pokedex app made developed using JavaScript
 <p>-Fetches data from: https://pokeapi-proxy.freecodecamp.rocks/api/pokemon </p>
