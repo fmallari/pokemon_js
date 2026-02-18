@@ -4,9 +4,32 @@ https://fmpokedex.netlify.app
 <h2>Screenshots</h2><br>
 
 -Pokedex app made developed using JavaScript
-<p>-Fetches data from: https://pokeapi-proxy.freecodecamp.rocks/api/pokemon <\p>
+<p>-Fetches data from: https://pokeapi-proxy.freecodecamp.rocks/api/pokemon </p>
 <p>-Users can search by name or index of Pokemon</p>
 <p>-Information provided of Pokemon includes: Name, Pokedex Number, Stats, Weight, Height, Sprite</p>
+
+<h3>Tech Stack</h3>
+	•	HTML
+	•	CSS3
+	•	JavaScript (ES6+)
+	•	Fetch API 
+
+<h3 >Handles</h3>
+	•	Invalid responses (404)
+	•	Empty searches
+	•	Network errors
+
+<h3>DOM Manipulation</h3>
+	•	Dynamically creates:
+	•	Type badges
+	•	Sprite image elements
+	•	Clears previous state before rendering new data
+
+<h3>UI/UX Enhancements</h3>
+	•	Inline status messaging
+	•	Disabled button during loading
+	•	Scrollable internal content for fixed-height cards
+	•	Responsive CSS grid layout
 
 <img width="1014" height="682" alt="Screenshot 2026-02-17 at 7 38 00 PM" src="https://github.com/user-attachments/assets/2df894d8-bed1-4b7d-87b4-20d61935581e" />
 
