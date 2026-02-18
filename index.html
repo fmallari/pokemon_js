@@ -1,32 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pokemon Search App</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Pokemon Search App</h1>
-    <div class="container">
-      <form role="search"
-    </div>
-    <input id="search-input" required></input>
-    <button id="search-button">Search</button>
-    <div id="pokemon-name"></div>
-    <div id="pokemon-id"></div>
-    <div id="weight"></div>
-    <div id="height"></div>
-    <div id="types"></div>
-    <div id="hp"></div>
-    <div id="attack"></div>
-    <div id="defense"></div>
-    <div id="special-attack"></div>
-    <div id="special-defense"></div>
-    <div id="speed"></div>
-    <div id="sprite-container"></div>
-    
-    <script src="script.js"></script>
-  </body>
+<HTML lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokédex Search</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Pokédex Search</h1>
+      <p>Search a Pokémon by name or Pokédex number.</p>
+    </header>
+
+    <!-- Search Card -->
+    <section class="card search-card" aria-label="Search Pokémon">
+      <form class="search-row" id="search-form">
+        <label class="sr-only" for="search-input">Search Pokémon</label>
+        <input
+          id="search-input"
+          type="text"
+          placeholder="e.g. pikachu or 25"
+          autocomplete="off"
+        />
+        <button id="search-button" type="submit">Search</button>
+      </form>
+
+      <!-- Optional: quick-search chips -->
+      <div class="chips" aria-label="Quick searches">
+        <button class="chip" type="button" data-q="pikachu">Pikachu</button>
+        <button class="chip" type="button" data-q="charizard">Charizard</button>
+        <button class="chip" type="button" data-q="150">150</button>
+      </div>
+
+      <!-- Optional status + error (your JS can use these if you added them) -->
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p id="error" class="error" role="alert" hidden></p>
+    </section>
+
+    <!-- Pokemon Card Output -->
+    <section class="pokemon-card" aria-label="Pokemon result card">
+      <div class="card-top">
+        <div class="card-title">
+          <h2 id="pokemon-name">—</h2>
+          <div class="sub">
+            <span id="pokemon-id">—</span>
+          </div>
+
+          <div id="types" class="type-row"></div>
+        </div>
+
+        <div id="sprite-container" class="sprite-wrap" aria-label="Pokemon sprite"></div>
+      </div>
+
+      <div class="card-meta">
+        <div class="meta-pill" id="height">Height: —</div>
+        <div class="meta-pill" id="weight">Weight: —</div>
+      </div>
+
+      <h3 class="section-title">Stats</h3>
+      <div class="card-stats">
+        <div class="stat"><span>HP</span><strong id="hp">—</strong></div>
+        <div class="stat"><span>Attack</span><strong id="attack">—</strong></div>
+        <div class="stat"><span>Defense</span><strong id="defense">—</strong></div>
+        <div class="stat"><span>Sp. Atk</span><strong id="special-attack">—</strong></div>
+        <div class="stat"><span>Sp. Def</span><strong id="special-defense">—</strong></div>
+        <div class="stat"><span>Speed</span><strong id="speed">—</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+  <!-- Optional: quick-search chips behavior (no conflict with your main JS) -->
+  <script>
+    const form = document.getElementById("search-form");
+    const input = document.getElementById("search-input");
+    const button = document.getElementById("search-button");
+
+    // Prevent form from reloading the page if your script.js doesn't do it
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      button.click();
+    });
+
+    // Quick chips
+    document.querySelectorAll(".chip").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        input.value = btn.dataset.q;
+        button.click();
+      });
+    });
+  </script>
+</body>
 </html>
