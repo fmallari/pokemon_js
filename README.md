@@ -4,7 +4,7 @@ https://fmpokedex.netlify.app
 <h2>Screenshots</h2><br>
 
 -Pokedex app made developed using JavaScript
-<p>-Pulls PokeAPI sourced from freeCodeCamp</p>
+<p>-Fetches data from: https://pokeapi-proxy.freecodecamp.rocks/api/pokemon <\p>
 <p>-Users can search by name or index of Pokemon</p>
 <p>-Information provided of Pokemon includes: Name, Pokedex Number, Stats, Weight, Height, Sprite</p>
 
