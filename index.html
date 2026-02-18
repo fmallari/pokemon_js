@@ -9,12 +9,15 @@
 
 <body>
   <main class="app">
-    <header class="header">
-      <h1>Pokédex Search</h1>
-      <p>Search a Pokémon by name or Pokédex number.</p>
-    </header>
+  <header class="header">
+    <h1>Pokédex Search</h1>
+    <p>Search a Pokémon by name or Pokédex number.</p>
+  </header>
 
-    <!-- Search Card -->
+  <!-- New side-by-side container -->
+  <div class="layout">
+
+    <!-- LEFT: Search -->
     <section class="card search-card" aria-label="Search Pokémon">
       <form class="search-row" id="search-form">
         <label class="sr-only" for="search-input">Search Pokémon</label>
@@ -27,19 +30,17 @@
         <button id="search-button" type="submit">Search</button>
       </form>
 
-      <!-- Optional: quick-search chips -->
-      <div class="chips" aria-label="Quick searches">
+      <div class="chips">
         <button class="chip" type="button" data-q="pikachu">Pikachu</button>
         <button class="chip" type="button" data-q="charizard">Charizard</button>
         <button class="chip" type="button" data-q="150">150</button>
       </div>
 
-      <!-- Optional status + error (your JS can use these if you added them) -->
-      <p id="status" class="status" role="status" aria-live="polite"></p>
-      <p id="error" class="error" role="alert" hidden></p>
+      <p id="status" class="status"></p>
+      <p id="error" class="error" hidden></p>
     </section>
 
-    <!-- Pokemon Card Output -->
+    <!-- RIGHT: Pokemon Card -->
     <section class="pokemon-card" aria-label="Pokemon result card">
       <div class="card-top">
         <div class="card-title">
@@ -47,11 +48,10 @@
           <div class="sub">
             <span id="pokemon-id">—</span>
           </div>
-
           <div id="types" class="type-row"></div>
         </div>
 
-        <div id="sprite-container" class="sprite-wrap" aria-label="Pokemon sprite"></div>
+        <div id="sprite-container" class="sprite-wrap"></div>
       </div>
 
       <div class="card-meta">
@@ -69,7 +69,9 @@
         <div class="stat"><span>Speed</span><strong id="speed">—</strong></div>
       </div>
     </section>
-  </main>
+
+  </div>
+</main>
 
   <script src="script.js"></script>
 
